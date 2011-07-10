@@ -1,0 +1,4 @@
+<form id='note_property_form' action='{% url note_properties %}?note_id={{note_id}}' method='post'>
+{{ note_property_form.as_p }}
+<input type='submit' value='Change Property'/>
+</form>

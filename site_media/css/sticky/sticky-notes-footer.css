@@ -1,0 +1,331 @@
+          body { 
+              font: 10px normal Verdana, Arial, Helvetica, sans-serif; 
+          } 
+			a{
+				color:#fcfef4;
+				text-decoration:none;
+			}
+			a:hover{
+				color:#fff;
+			}
+
+
+#footpanel {
+         position: fixed;
+         bottom: 0; left: 0;
+         z-index: 9999; /*--Keeps the panel on top of all other elements--*/
+         background: #e3e2e2;
+         border: 1px solid #c3c3c3;
+         border-bottom: none;
+         width: 94%;
+         margin: 0 3%;
+}
+         #footpanel ul {
+         padding: 0; margin: 0;
+         float: left;
+         width: 100%;
+         list-style: none;
+         border-top: 1px solid #fff; /*--Gives the bevel feel on the panel--*/
+         font-size: 1.1em;
+         }
+
+         #footpanel ul li{
+         padding: 0; margin: 0;
+         float: left;
+         position: relative;
+         }
+
+         #footpanel ul li a{
+         padding: 5px;
+         float: left;
+         text-indent: -9999px; /*--For text replacement - Shove text off of the page--*/
+         height: 16px; width: 16px;
+         text-decoration: none;
+         color: #333;
+         position: relative;
+         }
+
+         html #footpanel ul li a:hover{background-color: #fff; }
+
+         html #footpanel ul li a.active { /*--Active state when sub-panel is open--*/
+         background-color: #fff;
+         height: 17px;
+         margin-top: -2px; /*--Push it up 2px to attach the active button to sub-panel--*/
+         border: 1px solid #555;
+         border-top: none;
+         z-index: 200; /*--Keeps the active link on top of the sub-panel--*/
+         position: relative;
+
+         }
+
+         #footpanel a.home{
+         background: url(/site_media/images/sticky/home.png) no-repeat 15px center;
+         width: 50px;
+         padding-left: 40px;
+         border-right: 1px solid #bbb;
+         text-indent: 0; /*--Reset text indent since there will be a combination of both text and image--*/
+         }
+         a.profile{ background: url(/site_media/images/sticky/user.png) no-repeat center center;  }
+         a.editprofile{ background: url(/site_media/images/sticky/wrench_screwdriver.png) no-repeat center center; }
+         a.contacts{ background: url(/site_media/images/sticky/address_book.png) no-repeat center center; }
+         a.messages{ background: url(/site_media/images/sticky/mail.png) no-repeat center center; }
+         a.playlist{ background: url(/site_media/images/sticky/document_music_playlist.png) no-repeat center center; }
+         a.videos{ background: url(/site_media/images/sticky/film.png) no-repeat center center; }
+         a.alerts{ background: url(/site_media/images/sticky/newspaper.png) no-repeat center center; }
+         #footpanel a.chat{
+         background: url(/site_media/images/sticky/balloon.png) no-repeat 15px center;
+         width: 126px;
+         border-left: 1px solid #bbb;
+         border-right: 1px solid #bbb;
+         padding-left: 40px;
+         text-indent: 0; /*--Reset text indent since there will be a combination of both text and image--*/
+         }
+         #footpanel li#chatpanel, #footpanel li#alertpanel {float: right; }  /*--Right align the chat and alert panels--*/
+
+         #footpanel a small {
+         text-align: center;
+         width: 70px;
+         background: url(pop_arrow.gif) no-repeat center bottom;
+         padding: 5px 5px 11px;
+         display: none; /*--Hide by default--*/
+         color: #fff;
+         font-size: 1em;
+         text-indent: 0;
+         }
+         #footpanel a:hover small{
+         display: block; /*--Show on hover--*/
+         position: absolute;
+         top: -35px; /*--Position tooltip 35px above the list item--*/
+         left: 50%;
+         margin-left: -40px; /*--Center the tooltip--*/
+         z-index: 9999;
+         }
+
+         #footpanel ul {
+         padding: 0; margin: 0;
+         float: left;
+         width: 100%;
+         list-style: none;
+         border-top: 1px solid #fff; /*--Gives the bevel feel on the panel--*/
+         font-size: 1.1em;
+         }
+
+         #footpanel ul li{
+         padding: 0; margin: 0;
+         float: left;
+         position: relative;
+         }
+
+         #footpanel ul li a{
+         padding: 5px;
+         float: left;
+         text-indent: -9999px; /*--For text replacement - Shove text off of the page--*/
+         height: 16px; width: 16px;
+         text-decoration: none;
+         color: #333;
+         position: relative;
+         }
+
+         html #footpanel ul li a:hover{background-color: #fff; }
+
+         html #footpanel ul li a.active { /*--Active state when sub-panel is open--*/
+         background-color: #fff;
+         height: 17px;
+         margin-top: -2px; /*--Push it up 2px to attach the active button to sub-panel--*/
+         border: 1px solid #555;
+         border-top: none;
+         z-index: 200; /*--Keeps the active link on top of the sub-panel--*/
+         position: relative;
+
+         }
+
+         #footpanel a.home{
+         background: url(/site_media/images/sticky/home.png) no-repeat 15px center;
+         width: 50px;
+         padding-left: 40px;
+         border-right: 1px solid #bbb;
+         text-indent: 0; /*--Reset text indent since there will be a combination of both text and image--*/
+         }
+         a.profile{ background: url(/site_media/images/sticky/user.png) no-repeat center center;  }
+         a.editprofile{ background: url(/site_media/images/sticky/wrench_screwdriver.png) no-repeat center center; }
+         a.contacts{ background: url(/site_media/images/sticky/address_book.png) no-repeat center center; }
+         a.messages{ background: url(/site_media/images/sticky/mail.png) no-repeat center center; }
+         a.playlist{ background: url(/site_media/images/sticky/document_music_playlist.png) no-repeat center center; }
+         a.videos{ background: url(/site_media/images/sticky/film.png) no-repeat center center; }
+         a.alerts{ background: url(/site_media/images/sticky/newspaper.png) no-repeat center center; }
+         #footpanel a.chat{
+         background: url(/site_media/images/sticky/balloon.png) no-repeat 15px center;
+         width: 126px;
+         border-left: 1px solid #bbb;
+         border-right: 1px solid #bbb;
+         padding-left: 40px;
+         text-indent: 0; /*--Reset text indent since there will be a combination of both text and image--*/
+         }
+         #footpanel li#chatpanel, #footpanel li#alertpanel {float: right; }  /*--Right align the chat and alert panels--*/
+
+         #footpanel a small {
+         text-align: center;
+         width: 70px;
+         background: url(pop_arrow.gif) no-repeat center bottom;
+         padding: 5px 5px 11px;
+         display: none; /*--Hide by default--*/
+         color: #fff;
+         font-size: 1em;
+         text-indent: 0;
+         }
+         #footpanel a:hover small{
+         display: block; /*--Show on hover--*/
+         position: absolute;
+         top: -35px; /*--Position tooltip 35px above the list item--*/
+         left: 50%;
+         margin-left: -40px; /*--Center the tooltip--*/
+         z-index: 9999;
+         }
+
+         
+			.header{
+				position:absolute;
+				top:0px;
+				left:0px;
+				background:transparent url(header.png) no-repeat top left;
+				width:100%;
+				height:104px;
+			}
+			a img{
+				border:none;
+				outline:none;
+			}
+			.content{
+				position:absolute;
+				left:0px;
+				right:0px;
+				padding:0px;
+				margin:0px;
+				height:550px;
+			}
+			.about{
+				position:absolute;
+				top:655px;
+				left:0px;
+				width:100%;
+				height:400px;
+				background:transparent url(/site_media/images/sticky/about.png) repeat-x top left;
+				border-top:2px solid #ccc;				
+			}
+			.about .text{
+				width:20%;
+				margin:5px 2% 10px 2%;
+				height:380px;
+				float:left;		
+				color:#FCFEF3;		
+				font-weight:bold;
+				font-size: 11px;
+				text-align:justify;
+			}
+			.about .text h1{
+				border-bottom: 1px dashed #ccc;
+			}
+			ul.demos{
+				list-style-type:none;
+				position:absolute;
+				right:2px;
+				padding:0px;
+				margin:0px;
+				z-index:9999;
+			}
+			ul.demos li{
+				background-color:#3C3C3C;
+				display:inline;
+				color:#FEFEE7;
+				font-weight:bold;
+				float:left;
+				padding:2px 4px 2px 4px;
+				margin:2px;
+				-moz-border-radius:0px 0px 5px 5px;
+				-webkit-border-bottom-left-radius: 5px;
+				-webkit-border-bottom-right-radius: 5px;
+				-khtml-border-bottom-left-radius: 5px;
+				-khtml-border-bottom-right-radius: 5px;
+				-moz-box-shadow: 0 1px 3px #777;
+				cursor:pointer;
+				border:1px solid #ECEDD5;
+				border-top:none;
+			}
+			.descr{
+				position:absolute;
+				font-size:18px;
+				color:#ccc;
+				margin: 0 auto;
+				top:135px;
+				text-align:center;
+				width:100%;
+			} 
+.jSticky-large{
+	background:transparent url(/site_media/images/sticky/stickynote-large.png) no-repeat top left;
+	width:225px;
+	height:228px;
+	position: absolute;
+	z-index:999999;
+}
+.jSticky-medium{
+	background:transparent url(/site_media/images/sticky/stickynote-medium.png) no-repeat top left;
+	width:160px;
+	height:162px;
+	position: absolute;
+	z-index:999999;
+}
+.jSticky-delete{
+	background:transparent url(/site_media/images/sticky/delete.png) no-repeat top left;
+	height:14px;
+	width:14px;
+	position:absolute;
+	cursor:pointer;
+}
+.jSticky-medium .jStickyNote textarea, .jSticky-medium .jStickyNote p{
+	font-size: 14px;
+	font-weight:bold;
+	height:115px;
+}
+.jSticky-large .jStickyNote textarea, .jSticky-large .jStickyNote p{
+	height:160px;
+	font-size: 16px;
+}
+.jStickyNote textarea{
+	width:75%;
+	background-color:transparent;
+	border:none;
+	font-family: 'Comic Sans MS',Textile,cursive;
+	font-size:16px;
+	overflow:hidden;
+	color:#999;
+	padding:0px;
+	margin:15px 0px 0px 24px;
+	float:left;
+	resize:none;
+}
+.jStickyNote p{
+	font-family: 'Comic Sans MS',Textile,cursive;
+	color:#444;
+	margin:15px 0px 0px 24px;
+	overflow:hidden;
+	width:75%;
+	float:left;
+}
+.jSticky-large .jSticky-create{
+	float:right;
+	width:14px;
+	height:14px;
+	background:transparent url(/site_media/images/sticky/ok.png) no-repeat top left;
+	margin-right:1px;
+	margin-top:185px;
+	cursor:pointer;
+}
+.jSticky-medium .jSticky-create{
+	float:right;
+	width:14px;
+	height:14px;
+	background:transparent url(/site_media/images/sticky/ok.png) no-repeat top left;
+	margin-right:1px;
+	margin-top:80%;
+	cursor:pointer;
+}
