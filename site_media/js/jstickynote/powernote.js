@@ -36,3 +36,6 @@
 			
 		});
 
+function show_note_categories(){
+    alert('Something for now');
+};
