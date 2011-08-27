@@ -13,7 +13,6 @@ def view_save_note(request):
     if request.POST:
         y = request.POST['y-location']
         x = request.POST['x-location']
-#        import pdb;pdb.set_trace()
         description = request.POST['description']
         note_id = request.POST['note_id']
         url = request.META['HTTP_REFERER']
@@ -42,7 +41,6 @@ def view_notes_for_page(request):
     notes = Note.objects.filter(url = url).values('id','description', 'x_location', 'y_location', 'is_ticket_shown', 'is_active')
     list_of_notes = []
     for note in notes:
-        print note
         list_of_notes.append(note)    
     return HttpResponse(simplejson.dumps(list_of_notes))
 
@@ -60,7 +58,6 @@ def view_properties(request,property_template):
             active = note_property_form.cleaned_data['active']
             note_category_id = note_property_form.cleaned_data['note_category']
             Note.objects.update_note(note_id, note_category_id, status, description, active, show_ticket)
-            import pdb; pdb.set_trace()
 
     note_data = {}
     note_data['note_description'] = note_object.description

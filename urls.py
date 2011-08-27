@@ -1,4 +1,6 @@
 from django.conf.urls.defaults import *
+import os
+ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -13,7 +15,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
-    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/cs/Projects/django/anyadmin/powernote/site_media/'}),
+    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': os.path.join(ROOT_PATH,'site_media/')}),
 )
 
 

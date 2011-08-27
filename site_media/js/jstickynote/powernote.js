@@ -2,40 +2,32 @@
                       var items = []
                       $.getJSON('/notes_for_page/',function(data){
                             $.each(data, function(key,val) {
-                               $("#content").createNote({
+                               $("body").createNote({
                       				size : 'small',
                                     x: val.x_location,
                                     y: val.y_location,
                     				text : val.description,
-                     				containment : 'content',
+                     				containment : '',
                                     id: val.id,
 		                        });
                             });
                       });
-                   });
+        });
 
 		$(function() {
-			$("#content").stickynote({
+			$("body").stickynote({
 				size 			 : 'large',
-				text			 : 'Don\'t forget to buy beans!',
-				containment		 : 'content',
+				text			 : '',
+				containment		 : '',
 				event			 : 'dblclick'
 			});
-			
-			$("#testclick").stickynote({
-				size 			 : 'large',
-				containment		 : 'content'
-			});
-			
-			$("#testsmall").stickynote();
-			
-			$("#testcolor").stickynote({
-				color			: '#FF0000',
-				ontop			: true
-			});
-			
 		});
 
 function show_note_categories(){
     alert('Something for now');
+};
+
+
+function close_message() {
+    $('.alert-message').remove()
 };

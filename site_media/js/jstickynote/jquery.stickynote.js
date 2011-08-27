@@ -32,15 +32,18 @@
 							.addClass('jStickyNote')
                             .css('cursor','move');
 
-        var _save_button = $(document.createElement('input')).attr('type', 'button').attr('id', 'save').attr('value','Save');
+        var _save_button = $(document.createElement('button')).attr('id', 'save').attr('class','btn small primary');
+        _save_button.text('Save')
         _div_note.append(_save_button);
 
-        var _properties_button = $(document.createElement('input')).attr('type', 'button').attr('id','properties').attr('value','Properties');
+        var _properties_button = $(document.createElement('button')).attr('id','properties').attr('class', 'btn small primary');
+        _properties_button.text('Properties')
         _div_note.append(_properties_button)
 
-        var _hide_button = $(document.createElement('input')).attr('type', 'button').attr('id','hide').attr('value','Hide');
+        var _hide_button = $(document.createElement('button')).attr('id','hide').attr('class','btn small primary');
+        _hide_button.text('Hide')
         _div_note.append(_hide_button)
-        
+
         _save_button.click(function(e) 
                         { 
                             div_to_be_saved = $(e.target).parent().parent();
@@ -49,7 +52,11 @@
                                     type: "POST",
                                         url:'/save_note/',
                                 data: {'x-location':e.pageX, 'y-location':e.pageY , 'note_id': 'new', 'description': $(div_to_be_saved).find('#description').val()},
-                                        success: function(return_value){ alert('Success and this was returned' + return_value)},
+
+
+                                        success: function(return_value){
+                                            $("<div class='alert-message success'><a class='close' onClick='close_message();' href='#'>x</a><p>Note has been created successfully</p></div>").prependTo("body") 
+                                        }
                                         });
                         });
 
@@ -128,13 +135,13 @@
 					$(this).parent().append($(this));
 			}});	
 		}
-		$('#content').append(_div_wrap);
+		$('body').append(_div_wrap);
 	};
 
 
     // Have to remove this DANGEROUS !!!!
 	$.fn.createNote = function(o) {
-
+        
         x_location = o.x;
         y_location = o.y;
         note_text = o.text;
@@ -146,26 +153,30 @@
 							.addClass('jStickyNote')
                             .css('cursor','move');
 
-        var _save_button = $(document.createElement('input')).attr('type', 'button').attr('id', 'save').attr('value','Save');
+        var _save_button = $(document.createElement('button')).attr('id', 'save').attr('class','btn small primary');
+        _save_button.text('Save')
         _div_note.append(_save_button);
 
-        var _properties_button = $(document.createElement('input')).attr('type', 'button').attr('id','properties').attr('value','Properties');
+        var _properties_button = $(document.createElement('button')).attr('id','properties').attr('class', 'btn small primary');
+        _properties_button.text('Properties')
         _div_note.append(_properties_button)
 
-        var _hide_button = $(document.createElement('input')).attr('type', 'button').attr('id','hide').attr('value','Hide');
+        var _hide_button = $(document.createElement('button')).attr('id','hide').attr('class','btn small primary');
+        _hide_button.text('Hide')
         _div_note.append(_hide_button)
         
         _save_button.click(function(e) 
                         { 
                             div_to_be_saved = $(e.target).parent().parent();
                             note_id_to_be_saved = div_to_be_saved.attr('note_id');
-                            alert(note_id_to_be_saved);
                         
                             $.ajax({
                                     type: "POST",
                                         url:'/save_note/',
                                 data: {'x-location':e.pageX, 'y-location':e.pageY, 'note_id': note_id_to_be_saved, 'description' : $('#text-' + note_id_to_be_saved).val() },
-                                        success: function(return_value){ alert('Success and this was returned' + return_value)},
+                                        success: function(return_value){ 
+                                            $("<div class='alert-message success'><a class='close' onClick='close_message();' href='#'>x</a><p>Note has been created successfully</p></div>").prependTo("body")
+                                        },
                                         });
                         });
 
@@ -254,6 +265,6 @@
 					$(this).parent().append($(this));
 			}});	
 		}
-		$('#content').append(_div_wrap);
+		$('body').append(_div_wrap);
 	};
 })(jQuery);
