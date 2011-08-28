@@ -1,4 +1,47 @@
-<form id='note_property_form' action='{% url note_properties %}?note_id={{note_id}}' method='post'>
-{{ note_property_form.as_p }}
-<input type='submit' value='Change Property'/>
-</form>
+<form id='note_property_form'>
+<div id='change_property'>
+  <fieldset>
+    <legend>Change Note Properties</legend>
+    <div class='clearfix'>
+      <label for='xlInput'>Note Description</label>
+      <div class='input'>
+        {{ note_property_form.note_description }}
+      </div>
+    </div>
+
+    <div class='clearfix'>
+      <label for='xlInput'>Note Status</label>
+      <div class='input'>
+        {{ note_property_form.note_status }}
+      </div>
+    </div>
+
+    <div class='clearfix'>
+      <label for='xlInput'>Note Category</label>
+      <div class='input'>
+        {{ note_property_form.note_category }}
+      </div>
+    </div>
+
+    <div class='clearfix'>
+      <label for='xlInput'>Show Ticket</label>
+      <div class='input'>
+        {{ note_property_form.show_ticket }}
+      </div>
+    </div>
+
+    <div class='clearfix'>
+      <label for='xlInput'>Active</label>
+      <div class='input'>
+        {{ note_property_form.active }}
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='span3 columns offset3'>
+        <button type='submit' class='btn small primary' onCLick='change_property();'>Change Property</button>
+      </div>
+    </div>
+  </fieldset>
+</div>
+</form -->

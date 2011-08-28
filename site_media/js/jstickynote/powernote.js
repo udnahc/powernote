@@ -23,6 +23,7 @@
 			});
 		});
 
+
 function show_note_categories(){
     alert('Something for now');
 };
@@ -31,3 +32,9 @@ function show_note_categories(){
 function close_message() {
     $('.alert-message').remove()
 };
+
+
+$("a.menu").click(function (e) {
+    var $li = $(this).parent("li").toggleClass('open');
+    return false;
+});

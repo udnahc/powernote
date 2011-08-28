@@ -28,4 +28,5 @@ urlpatterns += patterns('note.views',
     (r'^save_note/$', 'view_save_note', {}, 'save_note'),
     (r'^notes_for_page/$', 'view_notes_for_page', {}, 'page_notes'),        
     (r'^properties/$','view_properties', {'property_template':'note/note_property.html'}, 'note_properties'),        
+    (r'^test_ajax/$', 'view_ajax_test', {}, 'test_ajax'),
 )

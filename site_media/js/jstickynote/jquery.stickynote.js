@@ -55,7 +55,7 @@
 
 
                                         success: function(return_value){
-                                            $("<div class='alert-message success'><a class='close' onClick='close_message();' href='#'>x</a><p>Note has been created successfully</p></div>").prependTo("body") 
+                                            $("<div class='alert-message success'><a class='close' onClick='close_message();' href='#'>x</a><p>Note has been created successfully</p></div>").appendTo("#navigation") 
                                         }
                                         });
                         });
@@ -175,7 +175,7 @@
                                         url:'/save_note/',
                                 data: {'x-location':e.pageX, 'y-location':e.pageY, 'note_id': note_id_to_be_saved, 'description' : $('#text-' + note_id_to_be_saved).val() },
                                         success: function(return_value){ 
-                                            $("<div class='alert-message success'><a class='close' onClick='close_message();' href='#'>x</a><p>Note has been created successfully</p></div>").prependTo("body")
+                                            $("<div class='alert-message success'><a class='close' onClick='close_message();' href='#'>x</a><p>Note has been created successfully</p></div>").appendTo("#navigation")
                                         },
                                         });
                         });
@@ -268,3 +268,18 @@
 		$('body').append(_div_wrap);
 	};
 })(jQuery);
+
+
+function change_property() {
+    $.ajax({
+        type: "POST",
+        url:'/test_ajax/',
+        // data: {'x-location':e.pageX, 'y-location':e.pageY , 'note_id': 'new', 'description': $(div_to_be_saved).find('#description').val()},
+
+        success: function(return_value){
+                    $("<div class='alert-message success'><a class='close' onClick='close_message();' href='#'>x</a><p>Note has been updated successfully</p></div>").prependTo("#change_property") 
+        }
+     });
+}
+
+

@@ -68,3 +68,6 @@ def view_properties(request,property_template):
     note_property_form = NotePropertyForm(data=note_data)
     return render_to_response(property_template, locals())
 
+
+def view_ajax_test(request):
+    return HttpResponse('Success')
