@@ -1,6 +1,8 @@
 import os 
 # Django settings for powernote project.
 
+# Remark
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
