@@ -30,3 +30,8 @@ urlpatterns += patterns('note.views',
     (r'^properties/$','view_properties', {'property_template':'note/note_property.html'}, 'note_properties'),        
     (r'^test_ajax/$', 'view_ajax_test', {}, 'test_ajax'),
 )
+
+urlpatterns += patterns('blog.views',
+    (r'^blog/$', 'index'),
+    (r'^blog/(?P<blog_id>\d+)/$', 'detail'),
+)

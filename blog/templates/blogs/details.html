@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Blog Details</title>
+<style type="text/css">
+span.blue {color:#357EC7;font-weight:bold;font-family:Monospace}
+span.titlecolor {color:#463E3F;font-weight:bold;font-family:normal}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+      <div class="span13">
+          {% if latest_blog_list %}
+                 <h3><span class="titlecolor">{{ latest_blog_list.title }}</span></h3>
+                 <p>Published by <span class="blue"> {{ latest_blog_list.author }} </span> on {{latest_blog_list.pub_date}}</p>
+                 <p class="desc">{{latest_blog_list.description}}</p>
+           {% else %}
+              <p>No Blogs are available.</p>
+           {% endif %}
+
+      </div>
+   </div>
+</div>
+
+
+</body>
+    <link rel="stylesheet" type="text/css" href="/site_media/css/bootstrap-1.1.1.min.css">
+</html>
