@@ -18,6 +18,10 @@ urlpatterns = patterns('',
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': os.path.join(ROOT_PATH,'site_media/')}),
 )
 
+urlpatterns += patterns('sitegyan.views',
+    (r'^$', 'view_home_page', {'home_page_template':'sitegyan/home_page.html'} , 'home_page'),    
+    (r'^pricing/$', 'view_pricing_page', {'pricing_page_template':'sitegyan/pricing_page.html'}, 'pricing_page'),
+)
 
 urlpatterns += patterns('photoapp.views',
     (r'^photo/home/$', 'view_photo_home', {'photo_home_template': 'photoapp/photo_home.html'}, 'photo_home'),
@@ -32,6 +36,11 @@ urlpatterns += patterns('note.views',
 )
 
 urlpatterns += patterns('blog.views',
-    (r'^blog/$', 'index'),
+    (r'^blog/$', 'index', {}, 'blog_home'),
     (r'^blog/(?P<blog_id>\d+)/$', 'detail'),
+)
+
+urlpatterns += patterns('poweruser.views',
+    (r'^signup/$','view_sign_up',{'signup_page_template':'poweruser/signup_page.html'},'signup'),
+    (r'^login/$', 'view_login_in', {'login_page_template':'poweruser/login_page.html'} , 'login'),
 )

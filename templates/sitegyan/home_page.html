@@ -1,0 +1,80 @@
+{%extends 'global/home_global.html'%}
+{%block title%}Welcome to SiteGyan{%endblock%}
+{%block home_body%}
+<header id="overview" class="jumbotron masthead">
+ <div class="inner">
+        <div class="container">
+          <h1>Powernote, from Sitegyan</h1>
+          <p class="lead">
+            Powernote is an easy to use web development and collaboration tool
+            <br>
+            Add virtual notes, suggestions and tickets to your web pages, assign them to developers and designers
+            <br>
+            <a href={%url signup%}>Sign Up</a>, Obtain the Javascript snippet and get Started !!!
+          </p>
+        </div><!-- /container -->
+      </div>
+</header>
+<div class="quickstart">
+  <div class="container">
+    <div class="row">
+      <div class="span5">
+        <h6>Try the demo <a href='#demo'>here</a></h6>        
+        <p>This is going to be the easiest collaboration tool you have used</p>
+      </div>
+      <div class="span5">
+        <h6>Like Powernote ?</h6>
+        <p>We would love to <a href='#feedback'>hear</a> from you</p>
+      </div>
+      <div class="span5">
+        <h6>Fork on Github</h6>
+        <p>We have other interesting projects on Github
+        <br>
+        <a class="btn primary" href="https://github.com/twitter/sitegyan" target="_blank">Sitegyan on GitHub »</a
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <section id="about">
+    <div class="page-header">
+      <h1>About Sitegyan <small>What we are upto, Powernote and more</small></h1>
+    </div>
+ <div class="row">
+    <div class="span-one-third">
+      <h3>What we are upto</h3>
+      <p>
+        Traditional Web Collaboration and Management tools have very less to do with the Website itself. Our attempt at Sitegyan is to bridge that gap and bring it as close as possible to the web developers. End users or peers can attach a JS snippet to their home template to activate Powernote and can start adding notes by double clicking on the frame where potential bugs/ suggestions are valid and the other developers would come to know immediately.
+      </p>
+      <p>Read more on our <a href="{%url blog_home%}">blog</a></p>
+      <p>
+        <iframe frameborder="0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.html#_=1320131594545&amp;align=&amp;button=blue&amp;id=twitter_tweet_button_0&amp;lang=en&amp;link_color=&amp;screen_name=udnahc&amp;show_count=&amp;show_screen_name=&amp;text_color=" class="twitter-follow-button" style="width: 300px; height: 20px;" title=""></iframe>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+      </p>
+    </div>
+    <div class="span-one-third">
+      <h3>Browser support</h3>
+      <p>Powernote is tested and supported in major modern browsers like Chrome and Firefox.</p>
+      <ul>
+        <li>Latest Google Chrome</li>
+        <li>Firefox 4+</li>
+      </ul>
+    </div>
+    <div class="span-one-third">
+      <h3>Features</h3>
+      <p>These are the features that Powernote has</p>
+      <ul>
+        <li>Create Projects and add people</li>
+        <li>Add notes directly on your web application</li>
+        <li>Raise tickets directly from these notes and assign people</li>
+        <li>Compare notes/ tickets/ suggestions with the admin</li>
+        <li>Create notes out of chat trascripts so you dont have to create ticket</li>
+      </ul>
+    </div>
+  </div><!-- /row -->
+  </section>
+</div>
+{%endblock%}
+
