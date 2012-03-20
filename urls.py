@@ -44,3 +44,8 @@ urlpatterns += patterns('poweruser.views',
     (r'^signup/$','view_sign_up',{'signup_page_template':'poweruser/signup_page.html'},'signup'),
     (r'^login/$', 'view_login_in', {'login_page_template':'poweruser/login_page.html'} , 'login'),
 )
+
+urlpatterns += patterns('demosite.views',
+    (r'^demo/$','browse_photos',{'browse_photo_page_template':'demo/demo_page.html'},'demo'),
+    (r'^upload/$', 'upload_photos', {'upload_photo_page_template':'demo/upload_page.html'} , 'upload'),
+)

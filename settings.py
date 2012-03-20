@@ -106,6 +106,7 @@ INSTALLED_APPS = (
     'photoapp',
     'blog',
     'sitegyan',
+    'demosite',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
