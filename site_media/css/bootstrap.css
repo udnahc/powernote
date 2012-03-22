@@ -58,8 +58,8 @@ sub {
   bottom: -0.25em;
 }
 img {
-  height: 200px;
-  width:200px;
+  height: 150px;
+  width:150px;
   border: 0;
  
   -ms-interpolation-mode: bicubic;
