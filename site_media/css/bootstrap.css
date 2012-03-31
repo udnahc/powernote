@@ -164,6 +164,7 @@ a:hover {
 [class*="span"] {
   float: left;
   margin-left: 20px;
+  margin-right: 20px;
 }
 .container,
 .navbar-fixed-top .container,
@@ -196,9 +197,12 @@ a:hover {
 }
 .span4 {
   width: 300px;
+  background-color: #f5f5f5;
 }
 .span3 {
   width: 220px;
+  background-color: #f5f5f5;
+  margin-left: 20px;
 }
 .span2 {
   width: 140px;
@@ -1918,6 +1922,7 @@ table .span24 {
 .well-large {
   padding: 24px;
   -webkit-border-radius: 6px;
+   background-color: #f5f5f5;
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
