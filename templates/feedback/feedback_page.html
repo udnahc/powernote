@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Logout</title>
+    <link rel="stylesheet" type="text/css" href="/site_media/css/sticky/sticky-notes-footer.css"/>
+    <link rel="stylesheet" type="text/css" href="/site_media/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/site_media/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/site_media/css/docs.css">
+
+</head>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="">
+                <h1><a href="/demo/">Powernote</a></h1>
+              </li>
+              <li class="divider-vertical"></li>
+             <div class="offset9">
+              <p class="navbar-text pull-right">Logged out</p>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+              <div class="offset5">
+             <p><h2>Write your feedback</h2></p>
+            <form action="." method="POST">
+            <div class="fieldWrapper">
+          {{ form.message.errors }}
+          {{ form.message }}
+        </div>
+           <p><input type="submit" value="Submit"></p>
+           </form>
+          </div><!--/.well -->
+ </body>
+</html>
