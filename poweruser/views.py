@@ -26,12 +26,11 @@ def view_login_in(request, login_page_template):
                 from django.contrib.auth import authenticate
                 user = authenticate(username=email, password = "%s%s" % (name,"123"))
                 if user:
-                    print "Logging user in "
                     from django.contrib.auth import login
                     login(request, user)
                     return HttpResponseRedirect(reverse("demo"))
                 else:
-                    print "Authentication failed yy ?????"
+                    error = u"Authentication Failed "
             else:
                 error= u"User already exists "
         else:

@@ -13,8 +13,6 @@ class UserProfileManager(models.Manager):
     def save_user(self, name, personal_email):
         default_password = "%s%s" % (name, "123")
         user_object = User.objects.create_user(name, personal_email, default_password)
-        print "Actual user object >>>>>>> ", user_object.id
-        
         user_profile = UserProfile()
         user_profile.user = user_object
         user_profile.name = name

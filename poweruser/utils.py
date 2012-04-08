@@ -8,8 +8,6 @@ class EmailBackend(ModelBackend):
         if email_re.search(username):
             try:
                 user = User.objects.get(email=username)
-                print "This is the user object returning ", user 
-                print "And the id ", user.id
                 if user.check_password(password):
                     return user
                 return None
