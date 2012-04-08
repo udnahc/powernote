@@ -5,9 +5,13 @@ from django.utils import simplejson
 from django.core import serializers
 from poweruser.forms import LoginForm
 from poweruser.models import UserProfile
+from django.core.urlresolvers import reverse
 
 def view_sign_up(request, signup_page_template):
     return render_to_response( signup_page_template, locals())
+
+def view_logout(request, logout_page_template):
+    return render_to_response( logout_page_template, locals())
 
 def view_login_in(request, login_page_template):
     form = LoginForm()
@@ -25,7 +29,7 @@ def view_login_in(request, login_page_template):
                     print "Logging user in "
                     from django.contrib.auth import login
                     login(request, user)
-                    return HttpResponseRedirect("demo")
+                    return HttpResponseRedirect(reverse("demo"))
                 else:
                     print "Authentication failed yy ?????"
             else:

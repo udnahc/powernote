@@ -625,6 +625,7 @@ label {
   margin-bottom: 5px;
   color: #333333;
 }
+
 input,
 textarea,
 select,
@@ -4002,3 +4003,4 @@ a.thumbnail:hover {
 .invisible {
   visibility: hidden;
 }
+

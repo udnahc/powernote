@@ -1,0 +1,23 @@
+{%extends 'cmn_hdr_ftr/global.html'%}
+{%block title%}Welcome to Demo{%endblock%}
+{%block home_body%}
+    <div class="container">
+      <div class="row-fluid">
+  {%if request.user.is_anonymous%}
+  <h3>
+      Thanks for checking out our demo :) 
+      We are flattered. If you like this please tweet it again - This is our handle.
+  </h3>
+  {%else%}
+  <p><h2>Write your feedback</h2></p>
+  <form action="." method="POST">
+    <div class="fieldWrapper">
+      {{ form.message.errors }}
+      {{ form.message }}
+    </div>
+    <p><input type="submit" value="Submit"></p>
+    </form>
+  {%endif%}
+    </div>
+</div>
+{%endblock%}
