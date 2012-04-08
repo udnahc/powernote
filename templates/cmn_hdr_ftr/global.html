@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>{% block title %}{% endblock %} - Sitegyan</title>
+{%block css%}
+    <link rel="stylesheet" type="text/css" href="/site_media/css/sticky/sticky-notes-footer.css"/>
+    <link rel="stylesheet" type="text/css" href="/site_media/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/site_media/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/site_media/css/docs.css">
+   <link rel="stylesheet" type="text/css" href="/site_media/css/popup/popup.css"/>
+
+    <script type="text/javascript"  src="/site_media/js/jquery/jquery-1.5.2.min.js"></script>
+    <script type="text/JavaScript" src="/site_media/js/jstickynote/jquery.stickynote.js"></script>
+    <script type="text/javascript" src="/site_media/js/jstickynote/ui.core.js"></script>
+    <script type="text/javascript" src="/site_media/js/jstickynote/ui.draggable.js"></script>
+    <script type="text/javascript" src="/site_media/js/jstickynote/powernote.js"></script>
+    <script type="text/javascript" src="/site_media/js/popup/popup.js"></script>
+{%endblock%}
+{%block extrastyle%}
+{%endblock%}
+</head>
+<body onload='{%block onload%}{%endblock%}' onunload='{%block onunload%}{%endblock%}'>
+{%block home_header%}
+   {%include "cmn_hdr_ftr/header.html"%}
+{%endblock%}
+
+{%block home_body%}
+{%endblock%}
+
+{%block home_footer%}
+   {%include "cmn_hdr_ftr/footer.html"%}
+{%endblock%}
+{%block js%}
+{%endblock%}
+</body>
+</html>

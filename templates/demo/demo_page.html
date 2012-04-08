@@ -1,0 +1,41 @@
+{%extends 'cmn_hdr_ftr/global.html'%}
+{%block title%}Welcome to Demo{%endblock%}
+{%block home_body%}
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Browse</li>
+              <li><a href="/demo/">Browse Photo</a></li>
+              <li class="nav-header">Upload</li>
+              <li><a href="/upload/">Upload Photo</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span8">
+          <div class="">
+           <h1>Browse your uploaded photos</h1>
+           <table class="table-bordered">
+             <tr>
+                <td><img src="/site_media/photos/april_flowers.jpg" /></td>
+                <td><img src="/site_media/photos/artistic_flowers.jpg" /></td>
+                <td><img src="/site_media/photos/daisy_flower.jpg" /></td>
+              </tr>
+              <tr>
+                <td><img src="/site_media/photos/flower_greeting.jpg" /></td>
+                <td><img src="/site_media/photos/stock-vector-beauty-pink-flower-design-69065557.jpg" /></td>
+                <td><img src="/site_media/photos/lost_flowers.jpg" /></td>
+             </tr>
+           </table>
+
+          </div><!--/.well -->
+        </div><!--/span-->
+       </div>
+
+    <div id="popupContact">
+
+    </div>
+    <div id="backgroundPopup"></div>
+  </div><!-- /container -->
+{%endblock%}

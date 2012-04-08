@@ -62,7 +62,7 @@ MEDIA_URL = ''
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'ex)@avdh+9+t8enqk&447e7y4nqw#*is400g^@p@r^s=yx5*%7'
@@ -106,11 +106,19 @@ INSTALLED_APPS = (
     'photoapp',
     'blog',
     'sitegyan',
+    'demosite',
+    'feedback',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
 
 # Authentication
 #AUTH_PROFILE_MODULE = 'poweruser.UserProfile'
-#AUTHENTICATION_BACKENDS = ( 'django.contrib.auth.backends.ModelBackend',
-#                            'poweruser.utils.EmailBackend',)
+AUTHENTICATION_BACKENDS = ( 'poweruser.utils.EmailBackend','django.contrib.auth.backends.ModelBackend')
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+)

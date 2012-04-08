@@ -43,4 +43,14 @@ urlpatterns += patterns('blog.views',
 urlpatterns += patterns('poweruser.views',
     (r'^signup/$','view_sign_up',{'signup_page_template':'poweruser/signup_page.html'},'signup'),
     (r'^login/$', 'view_login_in', {'login_page_template':'poweruser/login_page.html'} , 'login'),
+    (r'^logout/$', 'view_logout', {'logout_page_template':'poweruser/logout_page.html'},'logout'),
+)
+
+urlpatterns += patterns('demosite.views',
+    (r'^demo/$','browse_photos',{'browse_photo_page_template':'demo/demo_page.html'},'demo'),
+    (r'^upload/$', 'upload_photos', {'upload_photo_page_template':'demo/upload_page.html'} , 'upload'),
+)
+
+urlpatterns += patterns('feedback.views',
+    (r'^feedback/$','feedback_page',{'feedback_page_template':'feedback/feedback_page.html'},'feedback'),
 )

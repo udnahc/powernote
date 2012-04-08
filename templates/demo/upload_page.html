@@ -1,0 +1,27 @@
+{%extends 'cmn_hdr_ftr/global.html'%}
+{%block title%}Welcome to Demo{%endblock%}
+{%block home_body%}
+   <div class="container">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Browse</li>
+              <li><a href="/demo/">Browse Photo</a></li>
+              <li class="nav-header">Upload</li>
+              <li><a href="/upload/">Upload Photo</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span8">
+          <div class="offset2">
+           <p><h2>Upload your photos</h2></p>
+           <form>
+             <input class="input-xxlarge" type="file" value="Browse File" />
+             <p><input type="Submit" value="Upload"></p>
+           </form>
+          </div><!--/.well -->
+        </div><!--/span-->
+       </div>
+    </div><!-- /container -->
+{%endblock%}
